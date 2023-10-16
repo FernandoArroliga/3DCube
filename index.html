@@ -1,28 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
-    <!-- Meta Information -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Author: Fernando Arróliga -->
-    <!-- Day of Creation: Januar 23, 2023 -->
-
-    <!-- Title of the Page -->
-    <title>3D Cube</title>
-
-    <!-- Css Style Links -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- SwiperJs Links -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="static/css/style.css">   
 </head>
+
 <body>
 
-    <!-- Swiper Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Swiper -->
+    <div class="swiper mySwiper">
 
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+
+                <div class="imgBx">
+                    <img src="static/images/html_code.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Html Tutorial<br><span><a href="http://www.google.com">Go</a></span></h1>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="static/images/css_code.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Css Tutorial<br><span><a href="http://www.google.com">Go</a></span></h1>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="static/images/js_code.jpg" alt=""/>
+                </div>
+                <div class="content">
+                    <h1>JavaScript Tutorial<br><span><a href="http://www.google.com">Go</a></span></h1>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="imgBx">
+                    <img src="static/images/js_code.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Home<br><span><a href="index.html">Go</a></span></h1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "cube",
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
+
 </html>
+
+
